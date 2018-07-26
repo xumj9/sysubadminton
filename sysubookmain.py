@@ -52,7 +52,7 @@ def clearimage(originadd):
     for i in range(0,width):#遍历所有长度的点
         for j in range(0,height):#遍历所有宽度的点
             data = (img.getpixel((i,j)))#打印该图片的所有点
-            if (data[0]<=25 and data[1]<=25 and data[2]<=25):#RGBA的r,g,b均小于30
+            if (data[0]<=25 and data[1]<=25 and data[2]<=25):#RGBA的r,g,b均小于25
                 img.putpixel((i,j),(255,255,255,255))#则这些像素点的颜色改成白色
     img = img.convert("RGB")#把图片强制转成RGB
     img.save(repadd)#保存修改像素点后的图片
