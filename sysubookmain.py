@@ -5,7 +5,8 @@ from PIL import Image,ImageFilter
 import cv2
 from aip import AipOcr
 
-
+netid = 'xxx'
+password = 'xxxxx'
 bookdate = '2018-07-27'
 playtime = '17:01-18:00'
 dir = "/Users/mengjiexu/Documents/badminton/"
@@ -94,8 +95,8 @@ def Convertimg():
 
 
 def Login():
-    driver.find_element_by_xpath("//input[@id='username']").send_keys('xumj9')
-    driver.find_element_by_xpath("//input[@id='password']").send_keys('pherGI8od')
+    driver.find_element_by_xpath("//input[@id='username']").send_keys(netid)
+    driver.find_element_by_xpath("//input[@id='password']").send_keys(password)
     Convertimg()
     txtcode = getidentify(codeadd)
     print(txtcode)
